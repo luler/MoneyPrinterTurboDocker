@@ -1,0 +1,4 @@
+.env
+.idea
+**events.db
+**__pycache__
