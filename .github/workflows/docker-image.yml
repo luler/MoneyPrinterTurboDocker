@@ -39,7 +39,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/luler/money_printer_turbo_docker:latest
 
       - name: Logout from GitHub Container Registry
         run: docker logout ghcr.io
