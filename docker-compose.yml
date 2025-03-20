@@ -1,0 +1,19 @@
+services:
+  webui:
+    image: ghcr.io/luler/money_printer_turbo_docker:latest
+    container_name: "webui"
+    ports:
+      - "8501:8501"
+    command: [ "streamlit", "run", "./webui/Main.py","--browser.serverAddress=127.0.0.1","--server.enableCORS=True","--browser.gatherUsageStats=False" ]
+    volumes:
+      ./config.toml:/MoneyPrinterTurbo/config.toml
+    restart: always
+  api:
+    image: ghcr.io/luler/money_printer_turbo_docker:latest
+    container_name: "api"
+    ports:
+      - "8080:8080"
+    command: [ "python3", "main.py" ]
+    volumes:
+      ./config.toml:/MoneyPrinterTurbo/config.toml
+    restart: always
