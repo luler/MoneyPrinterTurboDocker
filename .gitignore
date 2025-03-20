@@ -2,3 +2,5 @@
 .idea
 **events.db
 **__pycache__
+storage
+config.toml
