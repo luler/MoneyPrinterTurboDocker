@@ -37,7 +37,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: MoneyPrinterTurbo
+          file: MoneyPrinterTurbo/Dockerfile
           push: true
           tags: ghcr.io/luler/money_printer_turbo_docker:latest
 
