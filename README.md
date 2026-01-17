@@ -37,6 +37,9 @@ docker-compose up -d
 
 访问页面：http://localhost:8501
 
+## 更新日志
+- 2026-01-18 手动触发镜像构建
+
 
 
 
